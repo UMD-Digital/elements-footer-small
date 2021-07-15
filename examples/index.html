@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 20px;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    main {
+      min-height: 20vh;
+    }
+
+    div[slot='contact'] a {
+      color: #454545;
+    }
+  </style>
+
+  <body>
+    <main></main>
+    <umd-footer-small
+      youtube="https://www.youtube.com/user/UMD2101"
+      facebook="https://www.facebook.com/UnivofMaryland"
+      twitter="https://twitter.com/UofMaryland"
+      instagram="https://www.instagram.com/univofmaryland/"
+      vimeo="https:google.com"
+    >
+      <div slot="contact">
+        <a
+          href="https://www.usmd.edu/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          The Flagship Institution of the State of Maryland
+        </a>
+        <address>
+          <p>College Park, MD 20742, USA</p>
+          <a href="tel:3014051000" aria-label="3014051000">301.405.1000</a>
+        </address>
+      </div>
+      <div slot="links">
+        <a
+          href="http://calendar.umd.edu/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Calendar</a
+        >
+      </div>
+    </umd-footer-small>
+    <script src="index.js" type="module" defer></script>
+  </body>
+</html>
