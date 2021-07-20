@@ -1,5 +1,5 @@
 {
-  "name": "@umd/footersmall",
+  "name": "@universityofmaryland/footersmall",
   "version": "0.0.1",
   "description": "Footer Small Element",
   "main": "dist/index.js",
