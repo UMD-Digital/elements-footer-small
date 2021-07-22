@@ -333,6 +333,7 @@ const makeUtilityLinks = ({ addedLinks, }) => {
         url: 'https://form.asana.com/?hash=f91df217c75378193f344df2348a7506fbd1288579ff8f54892bc6c5fff0c1fc&id=1126975427269659',
     });
     const copyRight = document.createElement('p');
+    const privacyIncludeSlash = Array.isArray(addedLinks) && addedLinks.length > 0 ? true : false;
     const wrapElement = (element, withSlash = true) => {
         const wrapper = document.createElement('div');
         const span = document.createElement('span');
@@ -353,7 +354,7 @@ const makeUtilityLinks = ({ addedLinks, }) => {
         }
     });
     copyRight.innerHTML = `&copy;${new Date().getFullYear()}`;
-    lock.appendChild(wrapElement(privacyLink));
+    lock.appendChild(wrapElement(privacyLink, privacyIncludeSlash));
     lock.appendChild(wrapElement(accessibilityLink));
     lock.appendChild(wrapElement(feedbackLink));
     lock.appendChild(wrapElement(copyRight));
@@ -412,7 +413,9 @@ export default class FooterSmall extends HTMLElement {
             });
             this._shadow.appendChild(markup);
             window.addEventListener('resize', debounce(() => this.eventResize()));
-            this.sizeUtility();
+            setTimeout(() => {
+                this.sizeUtility();
+            }, 300);
         });
     }
     sizeUtility() {

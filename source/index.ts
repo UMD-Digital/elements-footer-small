@@ -368,6 +368,8 @@ const makeUtilityLinks = ({
       'https://form.asana.com/?hash=f91df217c75378193f344df2348a7506fbd1288579ff8f54892bc6c5fff0c1fc&id=1126975427269659',
   });
   const copyRight = document.createElement('p');
+  const privacyIncludeSlash =
+    Array.isArray(addedLinks) && addedLinks.length > 0 ? true : false;
 
   const wrapElement = (element: HTMLElement, withSlash = true) => {
     const wrapper = document.createElement('div');
@@ -395,7 +397,7 @@ const makeUtilityLinks = ({
 
   copyRight.innerHTML = `&copy;${new Date().getFullYear()}`;
 
-  lock.appendChild(wrapElement(privacyLink));
+  lock.appendChild(wrapElement(privacyLink, privacyIncludeSlash));
   lock.appendChild(wrapElement(accessibilityLink));
   lock.appendChild(wrapElement(feedbackLink));
   lock.appendChild(wrapElement(copyRight));
