@@ -312,6 +312,8 @@ const makeSocial = ({ socialLinks }: { socialLinks: SocialLinksType }) => {
     const icon = icons[social['name']];
     const link = makeLinkElement({ name: icon, url: social['href'] });
 
+    link.setAttribute('aria-label', `link to ${social['name']} website`);
+
     wrapper.appendChild(link);
   };
 

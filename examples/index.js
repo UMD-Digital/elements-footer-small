@@ -292,6 +292,7 @@ const makeSocial = ({ socialLinks }) => {
     const makeAnchor = (social) => {
         const icon = icons[social['name']];
         const link = makeLinkElement({ name: icon, url: social['href'] });
+        link.setAttribute('aria-label', `link to ${social['name']} website`);
         wrapper.appendChild(link);
     };
     socialLinks.forEach((link) => makeAnchor(link));
