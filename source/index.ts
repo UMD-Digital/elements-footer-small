@@ -58,7 +58,7 @@ const template = document.createElement('template');
 
 template.innerHTML = `
   <style>
-  
+
     :host {
       display: block !important;
       background-color: ${Colors.offWhite} !important;
@@ -78,7 +78,7 @@ template.innerHTML = `
 
 
     :host .${SOCIAL_LINKS_CLASS} a:hover svg,
-    :host .${SOCIAL_LINKS_CLASS} a:hover svg path, 
+    :host .${SOCIAL_LINKS_CLASS} a:hover svg path,
     :host .${SOCIAL_LINKS_CLASS} a:focus svg,
     :host .${SOCIAL_LINKS_CLASS} a:focus svg path {
       fill: ${Colors.redDark} !important;
@@ -126,7 +126,7 @@ template.innerHTML = `
     @media (min-width: ${Breakpoints.desktopMin}px) {
       :host .${LOGO_CONTACT_WRAPPER_CLASS} {
         display: flex;
-        justify-content: space-between;
+        flex: 1 0 auto;
         width: 66%;
       }
     }
@@ -145,6 +145,7 @@ template.innerHTML = `
     @media (min-width: ${Breakpoints.desktopMin}px) {
       :host .${LOGO_CLASS} {
         justify-content: center;
+        margin-right: 40px;
       }
     }
 
@@ -153,7 +154,7 @@ template.innerHTML = `
       max-width: 280px;
     }
 
-    :host .${LOGO_CLASS}:hover svg, 
+    :host .${LOGO_CLASS}:hover svg,
     :host .${LOGO_CLASS}:focus svg {
       fill: inherit;
     }
@@ -165,6 +166,12 @@ template.innerHTML = `
     @media (max-width: ${Breakpoints.socialIconsTransitionPoint - 1}px) {
       :host .${CONTACT_CLASS} {
         margin-bottom: 20px;
+      }
+    }
+
+    @media (min-width: ${Breakpoints.desktopMin}px) {
+      :host .${CONTACT_CLASS} {
+        margin-right: 40px;
       }
     }
 
