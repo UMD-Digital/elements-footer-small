@@ -304,6 +304,7 @@ const makeLogo = () => {
   link.setAttribute('rel', 'noopener noreferrer');
   link.setAttribute('target', '_blank');
   link.setAttribute('href', 'https://umd.edu');
+  link.setAttribute('aria-label', 'Visit umd.edu ');
   link.classList.add(LOGO_CLASS);
 
   link.innerHTML = logoSvg;
