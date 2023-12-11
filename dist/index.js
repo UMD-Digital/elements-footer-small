@@ -43,6 +43,7 @@ const logoSvg = `<svg title="university of maryland logo" version="1.1" xmlns="h
 const icons = {
     youtube: `<svg title="youtube icon" aria-hidden="true" class="youtube-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="350" height="350" viewBox="0 0 350 350" xml:space="preserve"><defs></defs><g id="icon" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(-1.9444444444444287 -1.9444444444444287) scale(3.89 3.89)" ><path d="M 88.119 23.338 c -1.035 -3.872 -4.085 -6.922 -7.957 -7.957 C 73.144 13.5 45 13.5 45 13.5 s -28.144 0 -35.162 1.881 c -3.872 1.035 -6.922 4.085 -7.957 7.957 C 0 30.356 0 45 0 45 s 0 14.644 1.881 21.662 c 1.035 3.872 4.085 6.922 7.957 7.957 C 16.856 76.5 45 76.5 45 76.5 s 28.144 0 35.162 -1.881 c 3.872 -1.035 6.922 -4.085 7.957 -7.957 C 90 59.644 90 45 90 45 S 90 30.356 88.119 23.338 z M 36 58.5 v -27 L 59.382 45 L 36 58.5 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" /></g></svg>`,
     facebook: `<svg title="facebook icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 219.27 470.51"><path d="M271.52,154.17V113.63a89.17,89.17,0,0,1,.85-14.13,27.43,27.43,0,0,1,3.86-9.85q3-4.86,9.7-6.71t17.86-1.86h40.53V0h-64.8q-56.25,0-80.81,26.69t-24.55,78.66v48.82H125.62v81.09h48.54V470.51h97.36V235.26h64.81l8.56-81.09Z" transform="translate(-125.62)"></path></svg>`,
+    x: `<svg title="x icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12.5529 0.916626H14.9808L9.67661 6.97899L15.9166 15.2285H11.03L7.20322 10.2252L2.82453 15.2285H0.395177L6.06855 8.74412L0.083252 0.916626H5.09241L8.55148 5.48982L12.5515 0.916626H12.5529ZM11.7008 13.7753H13.0461L4.36213 2.2935H2.91847L11.7008 13.7753Z" fill="white" /></svg>`,
     twitter: `<svg title="twitter icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 449.96 365.44"><path d="M450,85.66a184.2,184.2,0,0,1-53.11,14.28q30-18,40.55-50.82a181.21,181.21,0,0,1-58.53,22.26q-27.42-29.11-67.39-29.12-38.25,0-65.24,27t-27,65.23a102.63,102.63,0,0,0,2.28,21.13,257,257,0,0,1-106.07-28.4A261.53,261.53,0,0,1,31.4,59.1a90.39,90.39,0,0,0-12.56,46.54,89.83,89.83,0,0,0,11.14,44,92.08,92.08,0,0,0,30,32.83,91.52,91.52,0,0,1-41.69-11.71v1.14q0,33.4,21,58.68a90.75,90.75,0,0,0,53,31.83A95.64,95.64,0,0,1,68,265.52a118.37,118.37,0,0,1-17.42-1.42,92.44,92.44,0,0,0,86.23,63.95Q86.51,367.44,22.27,367.44A195.31,195.31,0,0,1,0,366.3q64.25,41.4,141.61,41.4,49.11,0,92.21-15.56t73.67-41.69a278.82,278.82,0,0,0,52.67-60.09,268,268,0,0,0,33-71A262.06,262.06,0,0,0,404,145.32q0-8-.29-12A193.22,193.22,0,0,0,450,85.66Z" transform="translate(0 -42.26)"></path></svg>`,
     instagram: `<svg title="instagram icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,2.16c3.2,0,3.58,0,4.85.07,3.25.15,4.77,1.69,4.92,4.92.06,1.27.07,1.65.07,4.85s0,3.59-.07,4.85c-.15,3.23-1.66,4.77-4.92,4.92-1.27.06-1.64.07-4.85.07s-3.58,0-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s0-3.58.07-4.85C2.38,3.92,3.9,2.38,7.15,2.23,8.42,2.18,8.8,2.16,12,2.16ZM12,0C8.74,0,8.33,0,7.05.07c-4.35.2-6.78,2.62-7,7C0,8.33,0,8.74,0,12S0,15.67.07,17c.2,4.36,2.62,6.78,7,7C8.33,24,8.74,24,12,24s3.67,0,4.95-.07c4.35-.2,6.78-2.62,7-7C24,15.67,24,15.26,24,12s0-3.67-.07-4.95c-.2-4.35-2.62-6.78-7-7C15.67,0,15.26,0,12,0Zm0,5.84A6.16,6.16,0,1,0,18.16,12,6.16,6.16,0,0,0,12,5.84ZM12,16a4,4,0,1,1,4-4A4,4,0,0,1,12,16ZM18.41,4.15a1.44,1.44,0,1,0,1.43,1.44A1.44,1.44,0,0,0,18.41,4.15Z" transform="translate(0)"></path></svg>`,
     vimeo: `<svg title="vimeo icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M447.8 153.6c-2 43.6-32.4 103.3-91.4 179.1-60.9 79.2-112.4 118.8-154.6 118.8-26.1 0-48.2-24.1-66.3-72.3C100.3 250 85.3 174.3 56.2 174.3c-3.4 0-15.1 7.1-35.2 21.1L0 168.2c51.6-45.3 100.9-95.7 131.8-98.5 34.9-3.4 56.3 20.5 64.4 71.5 28.7 181.5 41.4 208.9 93.6 126.7 18.7-29.6 28.8-52.1 30.2-67.6 4.8-45.9-35.8-42.8-63.3-31 22-72.1 64.1-107.1 126.2-105.1 45.8 1.2 67.5 31.1 64.9 89.4z"/></svg>`,
@@ -70,6 +71,9 @@ template.innerHTML = `
       -o-transition: fill ${ANIMATION_OUT_SPEED}ms;
     }
 
+    :host .${SOCIAL_LINKS_CLASS} svg path {
+      fill: ${Colors.grayDark};
+    }
 
     :host .${SOCIAL_LINKS_CLASS} a:hover svg,
     :host .${SOCIAL_LINKS_CLASS} a:hover svg path, 
@@ -398,6 +402,7 @@ export default class FooterSmall extends HTMLElement {
         return [
             'padding',
             'youtube',
+            'x',
             'facebook',
             'twitter',
             'instagram',
